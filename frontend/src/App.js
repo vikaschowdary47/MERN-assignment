@@ -21,6 +21,8 @@ function App() {
         <h1 className="text-center text-primary">react</h1>
       <div className="d-flex justify-content-center" style={{marginTop:'150px'}}>
         <button className="btn btn-primary" onClick={onButtonClick}>SignUp</button>
+        <small>or</small>
+        <button className="btn btn-primary">Login</button>
         </div>
         </Route>
         <Route path="/signup">

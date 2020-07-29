@@ -1,13 +1,14 @@
 import React,{useState} from 'react';
 import { Container,Form,Row,Col }from 'react-bootstrap';
 import DatePicker from "react-datepicker";
+import TimePicker from 'react-time-picker';
 import "react-datepicker/dist/react-datepicker.css";
 
 export const Reservation = () => {
     const [username,setUsername] = useState('');
     const [table,setTable] = useState('');
     const [date,SetDate] = useState(new Date());
-    const [time,setTime] = useState('')
+    const [time,setTime] = useState('11:00')
     return (
         <Container fluid>
             <div >
@@ -34,8 +35,8 @@ export const Reservation = () => {
       </Col>
       </Form.Row>
       
-      <DatePicker selected={date} onChange={(date) => setDate(date)}/>
-    
+      <DatePicker selected={date} onChange={(date) => setDate(date)}/><br />
+        <TimePicker value={time} onChange={(time) => setTime(time)} />
             </Form>
             </div>
         </Container>

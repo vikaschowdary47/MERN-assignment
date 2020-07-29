@@ -1,23 +1,27 @@
 import React,{useState} from 'react';
-import { Form,Button,Card,Row,Col,Container }from 'react-bootstrap'
+import { Form,Button,Card,Row,Col,Container }from 'react-bootstrap';
+import axios from 'axios'
 
 export const SignUp = () => {
 
 const [username,setUsername] = useState('');
 const [email,setEmail] = useState('');
 const [password,setPassword] = useState('');
-const [users,setUsers] = useState([])
 
 
 const onSubmit = (e) => {
   e.preventDefault();
 
-  const users = {
-    username: {username},
-    email : {email},
-    password : {password}
+  const user = {
+    username: username,
+    email : email,
+    password : password
   }
-  console.log(users);
+
+  console.log(user);
+
+  axios.post('http://localhost:4000/users/add', user)
+      .then(res => console.log(res.data))
   window.location = '/reservation';
 }
 
