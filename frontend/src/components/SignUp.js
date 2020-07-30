@@ -22,7 +22,7 @@ const onSubmit = (e) => {
 
   axios.post('http://localhost:4000/users/add', user)
       .then(res => console.log(res.data))
-  window.location = '/reservation';
+  window.location = '/login';
 }
 
     return (
@@ -33,20 +33,20 @@ const onSubmit = (e) => {
             <Form.Group as={Row} controlId="formBasicName">
             <Form.Label column sm={5}>Username</Form.Label>
             <Col sm={10}>
-            <Form.Control type="text" placeholder="Enter username" value={username} onChange={(e)=>setUsername(e.target.value)}/>
+            <Form.Control type="text" name="username" placeholder="Enter username" value={username} onChange={(e)=>setUsername(e.target.value)}/>
             </Col>
             </Form.Group>             
             <Form.Group as={Row} controlId="formBasicEmail">
               <Form.Label column sm={5}>Email address</Form.Label>
               <Col sm={10}>
-              <Form.Control type="email" placeholder="Enter email" value={email} onChange={e => setEmail(e.target.value)} />
+              <Form.Control type="email" name="email" placeholder="Enter email" value={email} onChange={e => setEmail(e.target.value)} />
               </Col>
             </Form.Group>
 
             <Form.Group as={Row} controlId="formBasicPassword">
               <Form.Label column sm={5}>Password</Form.Label>
               <Col sm={10}>
-              <Form.Control type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)}/>
+              <Form.Control type="password" name="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)}/>
               </Col>
             </Form.Group>
             <Form.Group controlId="formBasicCheckbox">

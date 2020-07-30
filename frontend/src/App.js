@@ -1,7 +1,8 @@
-import React,{useState} from 'react';
+import React from 'react';
 import './App.css';
 import { SignUp } from './components/SignUp';
-import { Reservation } from './components/Reservation'
+import { Reservation } from './components/Reservation';
+import { Login } from './components/Login';
 import { Container }from 'react-bootstrap';
 import { BrowserRouter as Router,Route,Switch } from "react-router-dom";
 
@@ -29,6 +30,8 @@ function App() {
       <SignUp/>
       </Route>
       <Route path='/reservation'><Reservation /></Route>
+      <Route path='/login'><Login /></Route>
+
       </Switch>
       </Router>
       </Container>

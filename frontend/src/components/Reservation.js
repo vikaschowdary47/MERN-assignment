@@ -35,7 +35,7 @@ export const Reservation = () => {
       </Col>
       </Form.Row>
       
-      <DatePicker selected={date} onChange={(date) => setDate(date)}/><br />
+      <DatePicker selected={date} onChange={(date) => SetDate(date)}/><br />
         <TimePicker value={time} onChange={(time) => setTime(time)} />
             </Form>
             </div>
